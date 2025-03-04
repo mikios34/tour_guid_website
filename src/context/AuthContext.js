@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
             const userRole = decodedToken.role;
 
             await fetchUser();
-            localStorage.setItem("role",user.role);
+            localStorage.setItem("role",userRole);
 
             navigate(userRole === "admin" ? "/dashboard" : "/tours");
         } catch (error) {
